@@ -9,12 +9,16 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlaySE( 3, "wa_001", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_001", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_001", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask("background/g1", "up", 0, 0, 1300 );
-	PlayBGM( 1, "msys06", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys06", 128, 0 ); }
 
 //　下校時間には、たくさんの保護者が迎えに来ていた＠...さながら幼稚園のようだった￥
 	ClearMessage();
@@ -493,7 +497,9 @@ void main()
 
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //　エンジンを切ると、急に静かになり、涼しさと寂しさを持ったヒグラシの声が忍び込んできた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -564,7 +570,9 @@ void main()
 	OutputLine(NULL, "「全部です。」",
 		   NULL, "\"All of them.\"", Line_Normal);
 	ClearMessage();
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //「......いいですよ＠本当は報道管制の敷かれた秘密捜査なんですが、あなたには特別に聞かせてあげましょう＠...じゃあ最初の事件から行きます？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -710,7 +718,9 @@ void main()
 		   NULL, "Having exhausted that topic, I changed the subject... otherwise, he might turn the conversation on me...", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //「失踪された一日の足取りを調べました＠...手がかりになるようなものは見つかりませんでしたが、一応、お話しましょうか。￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -868,7 +878,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_023", 128, 64 ); }
 
 //　!s300........................!sdあれ......？＠
 //!s300
@@ -902,7 +914,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 200 );
-	PlayBGM( 1, "msys08", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys08", 128, 0 ); }
 
 //　今、一瞬気がついたことを頭からもう一度引き出すため、両手で頭を締め付ける＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -926,7 +940,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	StopSE( 3 );
-	PlayBGM( 2, "lsys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys13", 128, 0 ); }
 	DrawScene("background/jysa1", 1000 );
 
 //　綿流しの晩＠
@@ -948,7 +964,9 @@ void main()
 		   NULL, "...That night, Takano-san and Tomitake-san died.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DrawSceneWithMask("background/jt1", "up", 0, 0, 1300 );
 
 //　......翌朝、事件が雛見沢中に広がった￥
@@ -998,7 +1016,9 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 2, "lsys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys11", 128, 0 ); }
 	DrawScene("background/sora2", 1000 );
 
 //　...帰宅した時にはもう会合の始まる時間だった＠
@@ -1066,7 +1086,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 400 );
-	PlayBGM( 1, "msys16", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys16", 128, 0 ); }
 
 //　......でもそれが何だってんだ前原圭一...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1083,7 +1105,9 @@ void main()
 
 
 	FadeOutBGM( 1, 1000, TRUE );
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 
 //　....................................あ。!w1000
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1098,7 +1122,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("flashback/ma_j3_01", 3000 );
-	PlayBGM( 1, "msys16", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys16", 128, 0 ); }
 
 //「.......................................圭ちゃん、......私、...............どうしよう......。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1228,7 +1254,9 @@ void main()
 	OutputLine(NULL, "　イツ、打チ明ケルンダ？",
 		   NULL, "<i>When did she tell him?</i>", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_025", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_025", 128, 64 ); }
 	Wait( 2000 );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
@@ -1326,7 +1354,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/kuruma2", 400 );
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //「前原さん＠　大丈夫ですか＠　やっぱり熱いならクーラー入れますよ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1671,7 +1701,9 @@ void main()
 	OutputLine(NULL, "　あなた以外は全員が消えたのに、",
 		   NULL, "Everyone but you has disappeared,", Line_Continue);
 
-	PlaySE( 3, "wa_022", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_022", 128, 64 ); }
 
 //あなただけが無事なんです＠
 	OutputLine(NULL, "あなただけが無事なんです。",
@@ -1743,7 +1775,9 @@ void main()
 	OutputLine(NULL, "最後の生き残りなんじゃないですか。",
 		NULL, " have been left alive, right?", Line_Continue);
 	StopSE( 3 );
-	PlaySE( 3, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_023", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 
@@ -1798,7 +1832,9 @@ void main()
 
 
 
-	PlayBGM( 1, "msys08", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys08", 128, 0 ); }
 
 //「し、詩音が失踪したって？＠　そんな馬鹿なッ！！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1827,7 +1863,9 @@ void main()
 	OutputLine(NULL, "鷹野さんが死に、",
 		   NULL, " Takano-san died,", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_025", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_025", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //...詩音が消えた？＠
@@ -1918,7 +1956,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_026", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_026", 128, 64 ); }
 //nega 1
 //print 2
 	DisableWindow();
@@ -1944,7 +1984,9 @@ void main()
 		   NULL, "...I simply couldn't endure it...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 
 //　ちょっと待て、!w1000ちょっと待て＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2044,7 +2086,9 @@ void main()
 		   NULL, "...So it ended up taking quite a while before we realized she'd disappeared.\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\lsys25", 128, 0 ); }
 //dwaveplayloop 1
 
 
@@ -2069,7 +2113,9 @@ void main()
 		   NULL, "...When it had completely covered the surface of my skin... it began to worm its way inside my stomach as well......", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //「ほら、覚えてませんか＠　綿流しの次の日に、私たち図書館でお会いしたでしょう＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2174,7 +2220,9 @@ void main()
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
 //「ご存じなかったみたいですね＠...なら、先に話せばもっと話が早かったかなぁ＠もうこれでご理解いただけたでしょ＠...あとはあなただけなんです＠あなただけが、祭具殿に忍び込んだ４人の生き残りなんです。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2329,7 +2377,9 @@ void main()
 
 //■自宅にひとり
 	DisableWindow();
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 	DrawSceneWithMask("background/ma_s1", "down", 0, 0, 300 );
 
 //　......ソファーに横になり、...ぼんやりと時間を過ごした￥
@@ -2362,7 +2412,9 @@ void main()
 		   NULL, "The hands of the clock... were already pointing at ten.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 3, "wa_026", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_026", 128, 64 ); }
 
 //　......今日も、...あの電話は掛かってくるのだろうか＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2475,7 +2527,9 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/ma_s1", "down", 0, 0, 1300 );
 	StopSE( 3 );
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //「...............都合良く考えすぎるなよ、前原圭一......。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2577,7 +2631,9 @@ void main()
 		   NULL, "I may have only heard her over the phone... but her voice shouldn't be that easy to replicate.", GetGlobalFlag(GLinemodeSp));
 
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_024", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -2681,7 +2737,9 @@ void main()
 		   NULL, "...Just a little bit of courage to pick up the phone—I know it will ring tonight...!", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys16", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys16", 128, 0 ); }
 
 //　逃げるのはあまりに簡単...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2735,7 +2793,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 2, "lsys17", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys17", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -2754,7 +2814,9 @@ void main()
 		   NULL, " it rang.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //　どこから掛かってきているかもわからない、...電話が鳴った￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3041,7 +3103,9 @@ void main()
 		   NULL, "...Oh, how relieved I would have been if it hadn't been a call from Shion......", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys16", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys16", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys16", 128, 0 ); }
 
 //「あ、圭ちゃんですか＠　私です＠詩音です。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
@@ -3328,7 +3392,9 @@ void main()
 		   NULL, "...That said, however much I talked about the mayor, Ri—", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 1000, TRUE );
-	PlaySE( 3, "wa_025", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_025", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_025", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -3371,7 +3437,9 @@ void main()
 		   NULL, " ...As long as they're not hostages, it would be most practical to kill them once you were done with them.\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys25", 128, 0 ); }
 
 //　...............足元がぐらつくくらいに世界がたわみだす＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3426,7 +3494,9 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys20", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys20", 128, 0 ); }
 
 //「こ、ここ、殺しちゃうって、...そんなにあっさり...＠ひ、人の命を何だと思ってやがるんだ...ッ？！？！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -3562,7 +3632,9 @@ void main()
 		   NULL, "...There was no longer... any doubt... that it was my fault.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 
 //　......俺が殺した＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3970,7 +4042,9 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //　.........沈黙が訪れる＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4018,7 +4092,9 @@ void main()
 		   NULL, " ...Was Shion crying...?", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //「.....................私だって何が何だかわからないんです...@
 // 。祭具殿に忍び込んだあの晩から......全てが変わってしまった......。＠
@@ -4262,7 +4338,9 @@ void main()
 		   NULL, " whispered to me.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys25", 128, 0 ); }
 
 //　...思い出せ前原圭一￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4511,7 +4589,9 @@ void main()
 		   NULL, " What does that have to do with...\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 
 //　詩音は、...村長が行った病院を知らない＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4827,7 +4907,9 @@ void main()
 		   NULL, "...It was so quiet that it was like the phone cord had been cut... I couldn't sense anyone there.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys08", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys08", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys08", 128, 0 ); }
 
 //「...大石さんは君がすでに失踪していると言っているんだ＠...でも、...詩音はこうして毎晩、俺に電話をかけてきてくれただろ...？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -4882,7 +4964,9 @@ void main()
 		   NULL, "...Still... I'm pretty sure I haven't said anything wrong...!", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\lsys25", 128, 0 ); }
 ////dwaveplayloop 12
 
 //「.........頼む詩音＠......俺が言ったことが間違ってるなら、...そうだと言ってくれ＠詩音、頼むから......。＠
@@ -4983,7 +5067,9 @@ void main()
 	DisableWindow();
 	DrawScene("scene/003", 100 );
 
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	ModPlayVoiceLS(4, 6, "ps3/s02/06/130600546", 128, TRUE);
 	OutputLine(NULL, "け",

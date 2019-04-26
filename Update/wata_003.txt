@@ -13,7 +13,9 @@ void main()
 	DrawSceneWithMask("white", "m1", 0, 0, 300 );
 	ModDrawCharacter(2, 22, "sprite/normal/tie_1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/g1", "up", 0, 0, 1300 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 
 
 //「いいですか皆さん＠お料理は真剣にやらないと思わぬ怪我をします＠これも授業ですから、ふざけないでしっかりやって下さいね！＠
@@ -208,9 +210,13 @@ void main()
 	DisableWindow();
 	DrawScene("black", 200 );
 	DrawScene("white", 100 );
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	DrawScene("background/gr2", 400 );
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 0, 50, 20, 4, 0, );
 
 //　ドガガガッ！！＠
@@ -310,7 +316,9 @@ void main()
 		   NULL, "\"It looks like we're all on the same page!!", Line_WaitForInput);
 		   
 	DisableWindow();
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ModDrawCharacter(3, 3, "sprite/normal/me1b_ikari_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 400, FALSE );
 	ShakeScreen( 1, 20, 20, 5, 0, );
 
@@ -541,7 +549,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("black", 3000 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	DrawSceneWithMask("background/gr1", "right", 0, 0, 300 );
 
 //　ご飯は飯ごうで炊くが、デイキャンプ仕込みの俺にはそんな難しいものじゃない＠
@@ -872,7 +882,9 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 1000, TRUE );
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 
 //「そんなわけあるかー！＠　絶対ウソだ＠　トリックだＳＦＸだ＠　ワイヤーとか使ってるに違いなーい！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -892,7 +904,9 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	ModDrawCharacter(2, 3, "sprite/normal/me1b_akuwarai_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「くっくっくっく...＠ほれ、びろーん。＠
@@ -1013,9 +1027,13 @@ void main()
 		   NULL, " Today Keiichi-san shall be assuredly languishing in defeat all alone!!!\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlaySE( 3, "wa_015", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_015", 128, 64 ); }
 	Wait( 200 );
-	PlaySE( 3, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_005", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	ModDrawCharacter(1, 4, "sprite/normal/sa1b_hannbeso_b1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
@@ -1286,7 +1304,9 @@ void main()
 	OutputLine(NULL, "ではこうしよう。",
 		   NULL, " Then let's do this.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_011", 128, 64 ); }
 
 //俺が勝てたら、沙都子＆梨花ちゃんグループのカレーを食わせてやる＠これならどうだ？＠
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei13620", 128, TRUE);
@@ -1352,7 +1372,9 @@ void main()
 	OutputLine(NULL, "「…もちろん沙都子と梨花ちゃんの食べかけをだ。",
 		   NULL, "\"...Of course, that includes the part that Satoko and Rika-chan have already eaten some of.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_012", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_012", 128, 64 ); }
 
 //スプーンも付ける。＠
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei13640", 128, TRUE);
@@ -1362,7 +1384,9 @@ void main()
 
 
 	DisableWindow();
-	PlaySE( 4, "wa_030", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_030", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 0, 300 );
 	DrawScene("black", 500 );
 	
@@ -1377,7 +1401,9 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 4, "sprite/normal/sa1a_def_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/g1", "left", 0, 0, 300 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 
 //「あら...＠　...圭一さんも...結構やりますのね...＠　きれいなジャガイモですこと。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -1815,7 +1841,9 @@ void main()
 	OutputLine(NULL, "　あぁ、俺はひとりで戦ってるんじゃない。",
 		   NULL, "Yeah, I'm not fighting this alone.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 
 //...みんなで戦ってるんだ！！￥
 	OutputLine(NULL, "…みんなで戦ってるんだ！！！",
@@ -1944,7 +1972,9 @@ void main()
 	DrawSceneWithMask("black", "down", 0, 0, 500 );
 	ModDrawCharacter(2, 5, "sprite/normal/ri1_niko_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/gr2", "down", 0, 0, 500 );
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysRi", 128, 0 ); }
 
 //　梨花ちゃんはナベの前で地面にラクガキをしていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2101,7 +2131,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	DisableWindow();
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 	Negative( 200 , TRUE );
 
 //　その時...背筋にぞくりと...悪寒＠.........ご用はもう...終わってる？￥
@@ -2114,7 +2146,9 @@ void main()
 	DisableWindow();
 	FadeFilm( 300 , FALSE );
 	DrawSceneWithMask("black", "left", 0, 0, 200 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	ModDrawCharacter(2, 4, "sprite/normal/sa1a_akuwarai_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/gr1", "left", 0, 0, 200 );
 
@@ -2140,13 +2174,19 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	ModDrawCharacter(2, 4, "sprite/normal/sa1b_odoroki_b1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 50, TRUE );
 	Wait( 200 );
-	PlaySE( 3, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_005", 128, 64 ); }
 	ModDrawCharacter(2, 4, "sprite/normal/sa1b_hannbeso_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 50, TRUE );
 	Wait( 200 );
-	PlaySE( 3, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_005", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	ModDrawCharacter(2, 4, "sprite/normal/sa1b_naku_b1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
@@ -2306,7 +2346,9 @@ void main()
 	OutputLine(NULL, "　ズガシャーーーン…！！",
 		   NULL, "*CRASH*", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 4, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -2468,7 +2510,9 @@ void main()
 	DrawScene("black", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawSceneWithMask("background/gr2", "down", 0, 0, 1300 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //　机が並べられ、いよいよ食事と採点の時間がやってきた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2574,7 +2618,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/gr1", "up", 0, 0, 1300 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys03", 128, 0 ); }
 
 //「次は竜宮くんのカレーであるな＠うむ＠...実に美味そうである！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>校長</color>", NULL, "<color=#f5e6d3>Principal</color>", NULL, Line_ContinueAfterTyping); }
@@ -2767,7 +2813,9 @@ void main()
 		   NULL, "However, seeing that, Rika-chan read the nameplate on the chest of his coveralls, and began to speak.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysRi", 128, 0 ); }
 	ModDrawCharacter(1, 5, "sprite/normal/ri1_fuman_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「......だめですよ恭司＠ニンジンを残してはいけません。＠
@@ -2853,7 +2901,9 @@ void main()
 	OutputLine(NULL, "…梨花ちゃんのカレーは素朴なんじゃない。",
 		   NULL, " ...Rika-chan's curry was by no means 'simple.'", Line_WaitForInput);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 
 //それは...お袋の味のカレーだったのだ！！＠
 	OutputLine(NULL, "それは…お袋の味のカレーだったのだ！！！",
@@ -2891,7 +2941,9 @@ void main()
 	FadeAllBustshots( 400, TRUE );
 	ModDrawCharacter(2, 3, "sprite/normal/me1a_majime_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 
 //「騙されてはなりません審査員の皆々様方！＠/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -2899,7 +2951,9 @@ void main()
 	OutputLine(NULL, "「騙されてはなりません審査員の皆々様方！！",
 		   NULL, "\"Don't be fooled, my esteemed judges!!", Line_WaitForInput);
 
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(2, 3, "sprite/normal/me1b_majime_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
@@ -3237,7 +3291,9 @@ void main()
 		   NULL, "Well then... did that mean that even in this situation, I shouldn't give up!?", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	DrawSceneWithMask("background/gr2", "left", 0, 0, 300 );
 
 //「カレーは鍋ごとひっくり返し、ご飯すらも残ってない...＠この状況で...どう勝負を諦めるなって言うんだよ...ッ！！！￥
@@ -3362,7 +3418,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 10 );
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 400, TRUE );
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 300 );
@@ -3374,7 +3432,9 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 
 //　一手思いつく＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3575,7 +3635,9 @@ void main()
 	OutputLine(NULL, "　お前らのカレーをいただく。",
 		   NULL, " I'll be taking your curry.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 
 //　メシ抜きだっぁあぁああぁああッ！！！」/
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei14250", 128, TRUE);
@@ -3667,7 +3729,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawSceneWithMask("black", "down", 0, 0, 3000 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 
 //　審査員たちは様々なカレーを食傷気味になりながらも食べ、各人の出来を議論していた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3721,7 +3785,9 @@ void main()
 		   NULL, " That's a real shame!!\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 
 //「...カレーは失いましたが...勝負を失ったわけじゃありません＠...皆さんをうまいと言わせて見せます！！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -3752,7 +3818,9 @@ void main()
 	OutputLine(NULL, "　…これが…俺の料理だぁああぁあぁああッ！！！！」",
 		   NULL, " ...This is... My cookiiiIIiiiiiing!!!!\"", Line_Continue);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
@@ -3858,7 +3926,9 @@ void main()
 		   NULL, " Just watch.\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	DisableWindow();
 	FadeAllBustshots( 400, TRUE );
 
@@ -3940,7 +4010,9 @@ void main()
 
 //sd/
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 4, 0, );
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
@@ -4013,7 +4085,9 @@ void main()
 		   NULL, "Argh, was this little surprise just not enough...?", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	ModDrawCharacter(3, 3, "sprite/normal/me1a_def_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「......諦めるな圭ちゃん。＠
@@ -4140,7 +4214,9 @@ void main()
 		   NULL, " are things made to let you enjoy eating rice!!!!\"", Line_Continue);
 //sd<
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
@@ -4173,11 +4249,17 @@ void main()
 	OutputLine(NULL, "「カレーもおにぎりも……同じ米食文化の…",
 		   NULL, "\"Curry and onigiri... are both the results of...", Line_WaitForInput);
 
-	PlaySE( 3, "wa_015", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_015", 128, 64 ); }
 	Wait( 200 );
-	PlaySE( 3, "wa_015", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_015", 128, 64 ); }
 	Wait( 200 );
-	PlaySE( 3, "wa_015", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_015", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_015", 128, 64 ); }
 
 //結晶なのですッ！！！！！」/
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei14480", 128, TRUE);
@@ -4186,7 +4268,9 @@ void main()
 	DisableWindow();
 	DrawScene("white", 10 );
 	DrawBustshot(5, "background/furiker_b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 50, TRUE );
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	ModDrawCharacter(2, 22, "sprite/normal/tie_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/gr1", "up", 0, 0, 800 );
@@ -4397,7 +4481,9 @@ void main()
 	OutputLine(NULL, "挫けないでがんばったので特別に２０点プラス。",
 		   NULL, " For not giving up, and doing your best, plus 20 points.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 
 //百点をあげておきましょう。＠
 	ModPlayVoiceLS(4, 22, "ps3/s19/22/501400046", 128, TRUE);
@@ -4409,7 +4495,9 @@ void main()
 	ModDrawCharacter(1, 24, "sprite/normal/tomita1_warai_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_warai_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/gr2", 200 );
-	PlaySE( 4, "wa_003", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_003", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 
 //「「ま、前原さん！！　やったぁあぁあぁあああッ！！！」￥
@@ -4420,7 +4508,9 @@ void main()
 		   NULL, "\"\"Ma-Maebara-san!! We did iiiiiIIIIiiiiiiIIIiiit!!!\"\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys02", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys02", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys02", 128, 0 ); }
 
 //　後輩たちが飛びついてくる！＠　百点だ！＠　やったやったッ！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4630,7 +4720,9 @@ void main()
 	DrawSceneWithMask("background/gr2", "right", 0, 0, 300 );
 
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //「前原くん、さっきはああいう場だったので満点ということにしましたが......、!w800わかっていますね？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
@@ -4661,7 +4753,9 @@ void main()
 	ModDrawCharacter(2, 22, "sprite/normal/tie_4_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, FALSE );
 	DrawSceneWithMask("background/aka1", "right", 0, 0, 300 );
 
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //　先生の瞳の色が変だ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4691,7 +4785,9 @@ void main()
 		   NULL, "The teacher clutched me by the shoulders, and drew me in closer until our noses were almost touching.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys25", 128, 0 ); }
 
 //「カレーはこの世で一番尊くて神聖な素晴らしい料理です＠それとおにぎりを同一扱いするなんて断固許せません＠いいですか＠!s0　!w100カ!w100レ!w100ー!w100は!w100四!w100大!w100河!w100川!w100文!w100明!w100に!w100匹!w100敵!w100す!w100る!w100第!w100五!w100の!w100文!w100明!w100と!w100し!w100て!w100古!w100代!w100イ!w100ン!w100ド!w100に!w100生!w100ま!w100れ!w100、!w100ア!w100シ!w100ョ!w100カ!w100王!w100の!w100時!w100代!w1\00に!w100カ!w100ピ!w100ラ!w100城!w100で!w100シ!w100ャ!w100カ!w100の!w100生!w100誕!w100に!w100万!w100国!w100食!w100文!w100化!w100博!w100覧!w100会!w100が!w100絶!w100賛!w100し!w100て!w100ミ!w100シ!w100ュ!w100ラ!w100ン!w100ぐ!w100る!w100ぐ!w100る!w100エ!w100ッ!w100フ!w100ェ!w100ル!w100塔!w100す!w100ら!w100も!w100カ!w100レ!w100ー!w100漬!w100け!w100を!w100ぐ!w100つ!w100ぐ!w100つ!w100煮!w100込!w100ん!w100で!w100タ!w100ー!w100メ!w100リ!w100ッ!w100ク!w100が!w100寝!w100て!w100も!w100覚!w100め!w100て!w100も!w100カ!w100レ!w100ー!w100カ!w100レ!w100ー!w100カ!w100レ!w100ー!w100カ!w100レ!w100ー!sd......￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
@@ -5102,7 +5198,9 @@ void main()
 	FadeFilm( 4900 , FALSE );
 	DrawScene("black", 3000 );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	ModDrawCharacter(1, 4, "sprite/normal/sa1b_odoroki_b1_", "2", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/g1", "left", 0, 0, 300 );
 
@@ -5182,7 +5280,9 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	DisableWindow();
 	DrawSceneWithMask("background/m_hi3", "up", 0, 0, 1300 );
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys05", 128, 0 ); }
 
 //　結局...おにぎりは全部、校長に食べられてしまったので、俺は昼抜きとなったのだった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5419,7 +5519,9 @@ void main()
 		   NULL, "Rena asked the obvious question.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys03", 128, 0 ); }
 
 //「あ、えっと......魅音の双子の妹なんだよ＠性格は違うけど外見は瓜二つなんだ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5717,9 +5819,13 @@ void main()
 	SetValidityOfInput( TRUE );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 	DrawSceneWithMask("background/ma_g3_01", "up", 0, 0, 1300 );
-	PlaySE( 3, "wa_002", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_002", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_002", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_002", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
-	PlayBGM( 1, "msys05", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys05", 128, 0 ); }
 //!sd
 
 //　夕食は何時だろう...＠横になっているのが一番カロリーの消費が少ないだろうか＠
@@ -5738,7 +5844,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("black", "down", 0, 0, 1300 );
-	PlaySE( 3, "wa_028", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_028", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_028", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_028", 128, 64 ); }
 
 	SetValidityOfInput( FALSE );
 	Wait( 1500 );
@@ -6271,7 +6379,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/ma_j3_05", "up", 0, 0, 300 );
-	PlayBGM( 2, "lsys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys11", 128, 0 ); }
 
 //「......詩音、!w900......いや...魅音、!w1000俺が空腹で死にそうって言ってたの聞いて、大急ぎで持って来てくれたのか。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }

@@ -12,7 +12,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 3000 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	DrawScene("text/si_watanagasi", 1000 );
 	Wait( 15000 );
 	DrawScene("black", 1000 );
@@ -79,7 +81,9 @@ void main()
 //gosub *Ch_Ri_Si
 
 	DisableWindow();
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 	DrawSceneWithMask("white", "c", 0, 0, 1300 );
 //　目覚まし代りは小鳥のさえずりだった＠
 	ClearMessage();
@@ -122,7 +126,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("black", "down", 0, 0, 1300 );
-	PlayBGM( 2, "lsys17", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys17", 128, 0 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 5000 );
 	SetValidityOfInput( TRUE );
@@ -186,7 +192,9 @@ void main()
 
 
 
-	PlayBGM( 1, "msys02", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys02", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys02", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys02", 128, 0 ); }
 
 //「あっははは＠　おはよう圭一くん＠お寝坊さんだね。だね！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -615,7 +623,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 	DrawSceneWithMask("background/ma1", "left", 0, 0, 300 );
 
 //　ガレージに止めてある自転車のチェーンを外し、ちょっと硬めのペダルの踏み応えを楽しむ￥
@@ -1218,9 +1228,13 @@ void main()
 		   NULL, " Your big sis here will take care of the bad guy, okay?\"", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	DrawScene("white", 50 );
-	PlaySE( 3, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_005", 128, 64 ); }
 	DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 50, TRUE );
 	ShakeScreen( 1, 50, 20, 4, 0, );
 //	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 100, TRUE );
@@ -1541,7 +1555,9 @@ void main()
 	OutputLine(NULL, "「……何だありゃ。」",
 		   NULL, "\"...What the heck is that?\"", GetGlobalFlag(GLinemodeSp));
 
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysRi", 128, 0 ); }
 	ModDrawCharacter(2, 5, "sprite/normal/ri2_niko_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -1596,7 +1612,9 @@ void main()
 		   NULL, "...Damn. ...She's already chomping at the bit!", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re2b_kaii_b1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/mati_o2", "left", 0, 0, 300 );
 
@@ -1733,7 +1751,9 @@ void main()
 		   NULL, " Is there...", Line_Continue);
 
 	DisableWindow():
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 	Negative( 300 , FALSE );
 
 //!s400...ナニカ憑イテル...？!w800!sd　くっくっく！！＠
@@ -1780,7 +1800,9 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/mati_o2", 1000 );
-	PlayBGM( 1, "msysMi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysMi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysMi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysMi", 128, 0 ); }
 
 //　気付けば、店内にはいつの間にかさらに人が増えていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2022,7 +2044,9 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 	Negative( 100 , TRUE );
 
 //　雷が走ったかのように脊髄が跳ね、...氷柱をねじ込んだかのように、背筋が凍りつく￥
@@ -2054,7 +2078,9 @@ void main()
 	DisableWindow();
 	FadeFilm( 200, TRUE );
 //print 80
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 
 //「...へ＠　そんなに俺を緒戦で消したいかよ＠殺気が隠せてないぜ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2167,7 +2193,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　かつてない…最高に熱い部活バトルの火蓋が……切って落とされるのだッ！！",
 		   NULL, "The fuse had been lit on this unprecedentedly intense club battle!!", Line_Continue);
-	PlaySE( 4, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
@@ -2516,7 +2544,9 @@ void main()
 	OutputLine(NULL, "「会おうね。",
 		   NULL, "\"We shall meet...", Line_WaitForInput);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 
 //......決勝でッ！！！！！！￥
 	ModPlayVoiceLS(4, 3, "ps3/s19/03/990300426", 128, TRUE);
@@ -2679,7 +2709,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 100 );
-	PlaySE( 3, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_010", 128, 64 ); }
 	DrawScene("background/mati_o4", 500 );
 
 //　相手の得意ゲームを選ぶ必要など一切ない￥
@@ -2839,7 +2871,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 4, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_005", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 
 //　んなッ？＠　あっという間に逆転かよ？＠
@@ -2860,7 +2894,9 @@ void main()
 		   NULL, "\"1, 2, 3.", Line_WaitForInput);
 
 	DisableWindow();
-	PlaySE( 3, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_011", 128, 64 ); }
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //出世コースに進む。＠
@@ -2909,7 +2945,9 @@ void main()
 	OutputLine(NULL, "　…このゲームは…完全な運のゲームなのだ…！！！",
 		   NULL, "...This game... was completely based on luck!!!", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	Wait( 1000 );
 	OutputLineAll(NULL, "", Line_Normal);
@@ -3071,13 +3109,17 @@ void main()
 
 	if (GetGlobalFlag(GADVMode) == 0) { ClearMessage(); }
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#ffffff,0,0,639,479
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	Wait( 50 );
 
 	DisableWindow();
 	DrawScene("white", 10 );
 	DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 50, TRUE );
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 100, TRUE );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
@@ -3198,9 +3240,13 @@ void main()
 	OutputLine(NULL, "スパーーーーン！",
 		   NULL, " BAAAAAM!", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	Wait( 100 );
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 
 	Wait( 500 );
@@ -3209,9 +3255,13 @@ void main()
 	OutputLine(NULL, "　スパーーーーン！！",
 		   NULL, " BAAAAAAAAAAAAM!!", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_008", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_008", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_008", 128, 64 ); }
 	Wait( 100 );
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 
 //と快音が響いていた...￥
@@ -3554,7 +3604,9 @@ void main()
 		   NULL, "Over in that corner, the mood at that table was decidedly different from the others.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msysRi", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msysRi", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msysRi", 128, 0 ); }
 
 //　梨花ちゃんの卓のゲームは......電池で動く魚釣りのゲームをご存知だろうか＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3629,7 +3681,9 @@ void main()
 	DisableWindow();
 	ModDrawCharacterWithFiltering(3, 2, "sprite/normal/re2a_warai_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask("background/mati_o2", "left", 0, 0, 300 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 
 //「梨花ちゃんの圧勝だよ＠　圧勝だよ＠　梨花ちゃん、お魚釣りうまいんだね～！＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -4048,7 +4102,9 @@ void main()
 		   NULL, "....Ugh...!!!!", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(1, 24, "sprite/normal/tomita1_kanashimi_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, FALSE );
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
@@ -4124,7 +4180,9 @@ void main()
 	Wait( 1600 );
 	SetValidityOfInput( TRUE );
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 
 //見せてやるぜぇえええぇええぇッ！！！￥
 	OutputLine(NULL, "見せてやるぜぇえええぇええぇッ！！！！",
@@ -4136,7 +4194,9 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawBustshot(5, "background/furiker_a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 200, TRUE );
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	Wait( 400 );
 //setwindow 31,16,22,16,26,26,0,2,20,1,1,#999999,0,0,639,479
 
@@ -4145,7 +4205,9 @@ void main()
 	ModDrawCharacter(1, 24, "sprite/normal/tomita1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawScene("background/mati_o4", 400 );
-	PlayBGM( 1, "msys04", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys04", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys04", 128, 0 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 //!sd
 
@@ -4370,7 +4432,9 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei09760", 128, TRUE);
 	OutputLine(NULL, "「ロリ！",
 		   NULL, "\"Lolis!", Line_Continue);
-	PlaySE( 3, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_010", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //!w800萌え！/
@@ -4378,7 +4442,9 @@ void main()
 	OutputLine(NULL, "萌え！",
 		   NULL, " Moe!", Line_Continue);
 	Wait( 200 );
-	PlaySE( 3, "wa_014", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_014", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_014", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_014", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 //!w800美少女！！/
@@ -4393,7 +4459,9 @@ void main()
 	OutputLine(NULL, "男の垂涎、",
 		   NULL, " What men covet,", Line_Continue);
 
-	PlaySE( 3, "wa_012", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_012", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_012", 128, 64 ); }
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
@@ -4403,7 +4471,9 @@ void main()
 	OutputLine(NULL, "男の浪漫！！",
 		   NULL, " what men dream about!!", Line_Continue);
 
-	PlaySE( 3, "wa_016", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_016", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 
@@ -4412,7 +4482,9 @@ void main()
 	OutputLine(NULL, "例えるなら永遠にたどり着けないエデンの園ッ！！",
 		   NULL, " It's like an unreachable Garden of Eden!!", Line_Continue);
 
-	PlaySE( 3, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_011", 128, 64 ); }
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
@@ -4423,7 +4495,9 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei09800", 128, TRUE);
 	OutputLine(NULL, "　だけど目指すんだろ？！",
 		   NULL, " Even then, you'd still aim for it, wouldn't you?!", Line_Continue);
-	PlaySE( 3, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_029", 128, 64 ); }
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -4433,7 +4507,9 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei09810", 128, TRUE);
 	OutputLine(NULL, "　それは俺たちのハートに熱い魂が…萌えよと叫ぶからだッ！！！！！」",
 		   NULL, "That's because our passionate souls scream for moe!!!!\"", Line_Continue);
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -4457,10 +4533,14 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 3, "wa_016", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_016", 128, 64 ); }
 	ModDrawCharacter(1, 24, "sprite/normal/tomita1_odoroki_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	ShakeScreen( 1, 10, 20, 5, 0, );
-	PlaySE( 4, "wa_030", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_030", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 0, 300 );
 	DrawScene("black", 300 );
 
@@ -4485,10 +4565,14 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 3, "wa_016", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_016", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_016", 128, 64 ); }
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_odoroki_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 	ShakeScreen( 1, 10, 20, 5, 0, );
-	PlaySE( 4, "wa_030", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_030", 128, 64 ); }
 	DrawSceneWithMask("background/ryuuketu1", "aa", 0, 0, 300 );
 	DrawScene("black", 300 );
 
@@ -4558,7 +4642,9 @@ void main()
 	OutputLine(NULL, "　……だから…後輩のお前たちには…",
 		   NULL, "...So... to you, my juniors...", Line_WaitForInput);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 
 //そんな時間を過ごして欲しくないんだよッ！！！！＠
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei09900_02", 128, TRUE);
@@ -4581,7 +4667,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/furiker_b", "c", 0, 0, 300 );
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 	ModDrawCharacter(1, 24, "sprite/normal/tomita1_warai_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	ModDrawCharacter(3, 25, "sprite/normal/oka1_warai_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
@@ -4619,7 +4707,9 @@ void main()
 	DrawScene("black", 1000 );
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawScene("background/mati_o4", 1000 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys03", 128, 0 ); }
 
 //「......じゃあ、いいな＠　行くぞ＠.........せーの、＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -4646,7 +4736,9 @@ void main()
 	OutputLine(NULL, "「「「ゲーム終了ぉぉおおぉおッ！」」」",
 		   NULL, "\"\"\"Game oveeeer!\"\"\"", Line_Continue);
 
-	PlaySE( 3, "wa_007", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_007", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_007", 128, 64 ); }
 	ShakeScreen( 0, 50, 20, 3, 0, );
 	OutputLineAll(NULL, "", Line_Normal);
 
@@ -4707,7 +4799,9 @@ void main()
 	OutputLine(NULL, "男と男の決着だよな。",
 		   NULL, " It was a gentleman's agreement.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_011", 128, 64 ); }
 
 //......なぁみんなッ！！！￥
 	ModPlayVoiceLS(4, 1, "ps3/s19/01/hr_kei09970", 128, TRUE);
@@ -5254,7 +5348,9 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys01", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys01", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys01", 128, 0 ); }
 	ModDrawCharacterWithFiltering(3, 3, "sprite/normal/me2_wink_a1_", "2", "right", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 20, 300, TRUE );
 
 //「あ、ごめん圭ちゃん、!w700私、!w700これからバイトー...☆＠
@@ -5278,7 +5374,9 @@ void main()
 		   NULL, " I've got to get to my part-time job☆.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 3, "wa_029", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_029", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_029", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 3, 0, );
 
 //　んがーーー？＠　俺の両足が、コント番組そのままに前後に滑って開脚する￥
@@ -5839,7 +5937,9 @@ void main()
 		   NULL, "The lot of us looked like we were having a lot of fun, so it must have been hard to put a wet blanket on things.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 	ModDrawCharacter(2, 3, "sprite/normal/me2_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 //「じゃね＠今日は最高に楽しかった＠またねみんな＠明日、学校で～！＠
@@ -5932,8 +6032,12 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/mati3", 400 );
-	PlayBGM( 1, "msys05", 128, 0 );
-	PlayBGM( 2, "lsys11", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys05", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys11", 128, 0 ); }
 
 //　熱気で火照った体を鎮めるように、いつの間にか風はやさしく涼しくなっていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

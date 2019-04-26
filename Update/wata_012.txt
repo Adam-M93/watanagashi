@@ -10,7 +10,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 400 );
-	PlayBGM( 2, "lsys22", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys22", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys22", 128, 0 ); }
 	DrawSceneWithMask("background/ma_s1", "m1", 0, 0, 300 );
 
 //「.....................圭一＠.........圭一...？＠
@@ -77,7 +79,9 @@ void main()
 		   NULL, " What do those teachers think our children are?!\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys06", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys06", 128, 0 ); }
 
 //　親父とお袋が勝手に盛り上がっていたが、...本当に今さら興味のないことだった＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -186,7 +190,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	FadeOutBGM( 2, 400, TRUE );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 	DrawSceneWithMask("background/jysa1", "down", 0, 0, 1300 );
 
 //　...ここは入ってはいけないところなんだろ？＠　やめようぜ＠　カギが掛かっているのを勝手に開けて押し入るなんて、例え物を盗まなくったって犯罪なんだぞ！＠　詩音だって、これが密会現場じゃないとわかったなら充分だろ？＠　俺はこんなのには全然興味はないんだ＠　こんなところにいる間に梨花ちゃんの演舞が終わっちゃったらどうするんだよ？￥
@@ -300,7 +306,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_028", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_028", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_028", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_028", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -368,7 +376,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("white", "left", 0, 0, 300 );
-	PlayBGM( 1, "msys06", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys06", 128, 0 ); }
 	ModDrawCharacter(2, 2, "sprite/normal/re1a_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/ma_g1", "left", 0, 0, 300 );
 
@@ -801,7 +811,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("white", 10 );
-	PlaySE( 3, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_005", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 	Wait( 600 );
 	DrawScene("black", 400 );
@@ -990,7 +1002,9 @@ void main()
 		   NULL, " Feel free to come to the Sonozaki house if you want some.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //「...........................なんだ、!w1000......これ...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1050,7 +1064,9 @@ void main()
 	DrawScene("background/ma_g1", 1000 );
 
 
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //「............醤油をもらいに行くなら、!w700......園崎家へ、か＠......レナ＠...お前、ひょっとして......知ってたんじゃ...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1380,7 +1396,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("white", "m1", 0, 0, 300 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DrawSceneWithMask("background/ma1", "left", 0, 0, 300 );
 
 //　レナに伴われ、...表へ出る￥
@@ -1535,7 +1553,9 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("background/kuruma1", "down", 0, 0, 1300 );
 

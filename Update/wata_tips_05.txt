@@ -11,7 +11,9 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/ke_ky1", 1000 );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //「ンで俺たちが逮捕されなきゃなんねぇんだらぁあぁッ！！！＠
 	ClearMessage();

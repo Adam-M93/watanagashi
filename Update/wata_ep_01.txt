@@ -12,7 +12,9 @@ void main()
 //	FadeOutBGM( 2, 1000, TRUE );
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 4 ); }
 	SetStyleOfMessageSwinging( 1 );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　昭和５８年６月。
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -23,7 +25,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 	SetStyleOfMessageSwinging( 0 );
 
 //　ＸＸ県鹿骨市雛見沢村で、連続失踪事件が発生した。
@@ -36,7 +40,9 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　容疑者は、園崎魅音（１Ｘ歳）
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　容疑者は、園崎魅音（１Ｘ歳）",
@@ -46,7 +52,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　容疑者は６月１９日から２１日までの間に雛見沢村住民５人（園崎お魎・園崎詩音・公由喜一郎・古手梨花・北条沙都子）を拉致、監禁して殺害した疑い。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
@@ -57,7 +65,9 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　事件は当初、情報不足のため初動捜査で遅れをとったが、偶然的、電撃的に解決した。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　事件は当初、情報不足のため初動捜査で遅れをとったが、偶然的、電撃的に解決した。",
@@ -69,7 +79,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("background/so1", 1000 );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 
 //２３日午前中、園崎邸前を巡回していた警邏車両は邸内よりの悲鳴を聞き、緊急措置として邸内へ突入。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -83,7 +95,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("background/so2", 1000 );
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　失踪中の容疑者の妹（園崎詩音）とクラスメート２名（前原圭一・竜宮礼奈）を保護した。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　失踪中の容疑者の妹（園崎詩音）とクラスメート２名（前原圭一・竜宮礼奈）を保護した。",
@@ -93,7 +107,9 @@ void main()
 	FadeOutBGM( 2, 10, TRUE );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 
 //　容疑者は現場より逃走する。
 	OutputLine(NULL, "　容疑者は現場より逃走する。",
@@ -106,7 +122,9 @@ void main()
 	DisableWindow();
 	DrawScene("background/saiguden_01", 1000 );
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　失踪者たちを殺害したと思われる園崎邸内の離れ地下奥、拷問室からは、失踪者４人（園崎お魎・公由喜一郎・古手梨花・北条沙都子）の毛髪、皮膚片、血液などを発見。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
@@ -118,7 +136,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　拷問室内で失踪者たちが拷問を受けたものと断定した。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　拷問室内で失踪者たちが拷問を受けたものと断定した。",
@@ -128,7 +148,9 @@ void main()
 	FadeOutBGM( 2, 10, TRUE );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 
 //　ただし、その遺体は依然、発見されていない。
 	OutputLine(NULL, "　ただし、その遺体は依然、発見されていない。",
@@ -140,7 +162,9 @@ void main()
 	ClearMessage();
 //＠を長文のため￥に変更
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　監禁されていたクラスメートの証言から、監禁現場となった、園崎邸内の離れ地下にあるものと見て捜索を続けているが、容疑者の逃亡ルート共々、発見には未だ至っていない。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
@@ -151,7 +175,9 @@ void main()
 	OutputLineAll(NULL, "", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　また、ほのめかしたとされる近年の連続怪死事件への関与も捜査が続けられているが、
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　また、ほのめかしたとされる近年の連続怪死事件への関与も捜査が続けられているが、",
@@ -161,7 +187,9 @@ void main()
 	FadeOutBGM( 2, 10, TRUE );
 	OutputLineAll(NULL, " ", GetGlobalFlag(GLinemodeSp));
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 
 //　園崎魅音が直接、または間接的に関わったという証拠は発見されていない。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -173,7 +201,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　事件の動機には今もなお不明な点が多く、また、園崎家、雛見沢村住民の極度の非協力もあり、その解明には膨大な時間を要することが予想される。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
@@ -187,7 +217,9 @@ void main()
 	DisableWindow();
 	DrawScene("background/jt1", 1000 );
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　地域に詳しい地元警察の見解では、雛見沢村内の信仰に対する冒涜行為を巡る、内部懲罰、リンチ事件ではないかと見ている。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　地域に詳しい地元警察の見解では、雛見沢村内の信仰に対する冒涜行為を巡る、内部懲罰、リンチ事件ではないかと見ている。",
@@ -197,7 +229,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　地域性に根ざした特殊な事件であることは間違いなく、県警本部は慎重な捜査を命じた。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　地域性に根ざした特殊な事件であることは間違いなく、県警本部は慎重な捜査を命じた。",
@@ -210,7 +244,9 @@ void main()
 	DisableWindow();
 	DrawScene("background/sinryou_soto3", 1000 );
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　容疑者の妹で、もっとも監禁期間の長いと思われる失踪者（園崎詩音）から重要な手掛かりを得られるのではないかと期待したが、
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　容疑者の妹で、もっとも監禁期間の長いと思われる失踪者（園崎詩音）から重要な手掛かりを得られるのではないかと期待したが、",
@@ -220,7 +256,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　事件後、精神に重度の後遺症を患い、今日まで正常な事情聴取に応じられる精神状態にない。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　事件後、精神に重度の後遺症を患い、今日まで正常な事情聴取に応じられる精神状態にない。",
@@ -230,7 +268,9 @@ void main()
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 2, "lsys24", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys24", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys24", 128, 0 ); }
 //　精神科医は、ショックによる一過性のものと診断したが、その回復の目処は今日でも立っていない。
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　精神科医は、ショックによる一過性のものと診断したが、その回復の目処は今日でも立っていない。",
@@ -247,7 +287,9 @@ void main()
 	DrawScene("black", 1000 );
 //!sd
 
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //　................................................あれから、!w1200...ほんの何日かが過ぎた￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -513,7 +555,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 3000 );
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 	ModDrawCharacter(2, 2, "sprite/sunset/re1a_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/hi5_01", "left", 0, 0, 3000 );
 
@@ -688,7 +732,9 @@ void main()
 	DrawScene("black", 400 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	DrawSceneWithMask("background/simen3", "left", 0, 0, 300 );
 
 //　園崎家が必死に隠していた事件も、わずかなほころびから雑誌社にすっぱ抜かれることになった￥
@@ -846,7 +892,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 	DrawScene("background/ma_j3_01", 1000 );
 
 //　今でも、......夜の１０時になると...詩音、いや魅音から電話が掛かってくる気がする＠
@@ -1254,9 +1302,13 @@ void main()
 
 
 
-	PlayBGM( 1, "msys11", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys11", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys11", 128, 0 ); }
 
-	PlaySE( 3, "wa_020", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_020", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_020", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_020", 128, 64 ); }
 
 //　窓をガラリと開けて、人影を改めて見直す￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1558,7 +1610,9 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 
 //　......魅音の額に、玉のような汗がいくつも浮いていることを＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1788,8 +1842,12 @@ void main()
 	SetValidityOfInput( TRUE );
 
 
-	PlaySE( 3, "wa_030", 128, 64 );
-	PlayBGM( 1, "msys19", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_030", 128, 64 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys19", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys19", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys19", 128, 0 ); }
 
 //.....................おぶ......￥
 	OutputLine(NULL, "…………………おぶ……、",
@@ -1799,17 +1857,23 @@ void main()
 	DisableWindow();
 	DrawScene("black", 200 );
 	DrawScene("toketu1a", 300 );
-	PlaySE( 1, "wa_035", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 1, "wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 1, "Original\wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 1, "April2019Update\wa_035", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
 	SetValidityOfInput( TRUE );
 	DrawScene("toketu1b", 300 );
-	PlaySE( 1, "wa_035", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 1, "wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 1, "Original\wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 1, "April2019Update\wa_035", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
 	SetValidityOfInput( TRUE );
 	DrawScene("toketu1c", 300 );
-	PlaySE( 1, "wa_035", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 1, "wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 1, "Original\wa_035", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 1, "April2019Update\wa_035", 128, 64 ); }
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );

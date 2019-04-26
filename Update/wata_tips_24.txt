@@ -11,7 +11,9 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //『本日は貸切です。～雀荘「鈴」～￥
 	ClearMessage();

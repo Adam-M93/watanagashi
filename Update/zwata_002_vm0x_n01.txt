@@ -31,7 +31,9 @@ void dialog002()
 	OutputLine(NULL, "やっぱりアレだよな。",
 		   NULL, " It can only be 'that.'", Line_WaitForInput);
 
-	PlaySE( 3, "wa_010", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_010", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_010", 128, 64 ); }
 
 //荷物持ち￥
 
@@ -70,8 +72,12 @@ void dialog004()
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
 
-	PlaySE( 3, "wa_006", 128, 64 );
-	PlayBGM( 1, "msys03", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys03", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys03", 128, 0 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 

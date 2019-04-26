@@ -50,7 +50,9 @@ void dialog003()
 	OutputLine(NULL, "俺がだぁああぁあぁあッ！！！！」",
 		   NULL, " I wiiiiilllllll!!!!\"", Line_ContinueAfterTyping);
 
-	PlaySE( 3, "wa_006", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_006", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_006", 128, 64 ); }
 	ShakeScreen( 1, 50, 20, 4, 0, );
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
@@ -84,6 +86,8 @@ void dialog006()
 	OutputLine(NULL, "美少女！！",
 		   NULL, " Pretty girls!!", Line_Continue);
 
-	PlaySE( 3, "wa_011", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_011", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_011", 128, 64 ); }
 	OutputLineAll(NULL, "", Line_WaitForInput);
 }

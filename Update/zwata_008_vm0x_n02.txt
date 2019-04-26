@@ -13,7 +13,9 @@ void dialog001()
 	OutputLine(NULL, "　もちろん、古手家の人間以外は",
 		   NULL, "Of course, if anyone but the Furude family enters...", Line_Continue);
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_024", 128, 64 ); }
 
 //「穢れ（ケガレ）」を持ち込むから立入禁止の不可侵領域＠......聖域なの。＠
 
@@ -106,7 +108,9 @@ void dialog009()
 		   NULL, " ...You've probably realized it already, but that's not a hoe for plowing fields.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 3, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_023", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "鷹野さんはそこで言葉を区切って、にやりと笑う。……つまり、「鍬」といっても鋭利な「刃物」としての道具とでもいいたいのだろうか……。",

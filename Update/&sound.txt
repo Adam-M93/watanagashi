@@ -1,0 +1,153 @@
+void main()
+{
+}
+
+// JAPANESE TEXT IS GOOGLE TRANSLATED AS PLACEHOLDER
+void AudioQuestion ()
+{
+	if (GetGlobalFlag(GAltBGM) == 0) {
+		OutputLine(NULL, "デフォルトのBGMとサウンドエフェクトを使いますか？",
+			   NULL, "Would you like to use the default BGM and Sound Effects?", Line_Normal);
+
+		char Item[2];
+
+		if (GetGlobalFlag(GLanguage) == 1) {
+			Item[0] = "Use Default";
+			Item[1] = "Select Soundtrack and Sound Effects";
+		} else {
+			Item[0] = "デフォルトを使用します";
+			Item[1] = "サウンドトラックとサウンドエフェクトを選択する";
+		}
+
+		Select( 2, Item );
+
+		if (LoadValueFromLocalWork(SelectResult) == 0) {
+			SetGlobalFlag(GAltBGM, 1); } 
+		if (LoadValueFromLocalWork(SelectResult) == 1) {
+			SetGlobalFlag(GAltBGM, 0); }
+
+		DisableWindow();
+	}
+}
+
+void MusicQuestion()
+{
+	if (GetGlobalFlag(GAltBGM) == 0) {
+		OutputLine(NULL, "どのサウンドトラックを使用しますか？",
+			   NULL, "Which Soundtrack would you like to use?", Line_Normal);
+			   
+		char Item[3];
+
+		if (GetGlobalFlag(GLanguage) == 1) {
+			Item[0] = "07th-Mod Audio Pack Music";
+			Item[1] = "Original Music (2002)";
+			Item[2] = "New Patch Music (2019)";
+//			Item[3] = "Console Music";
+//			Item[4] = "MangaGamer Music (2009)";
+//			Item[5] = "Anime Music";
+		} else {
+			Item[0] = "07th-Modオーディオパックミュージック";		
+			Item[1] = "オリジナルミュージック (2002)";
+			Item[2] = "新しいパッチミュージック (2019)";
+//			Item[3] = "コンソールミュージック";
+//			Item[4] = "MangaGamer 音楽 (2009)";
+//			Item[5] = "アニメ音楽";
+		}
+
+		Select( 3, Item );
+
+		if (LoadValueFromLocalWork(SelectResult) == 0) {
+			SetGlobalFlag(GAltBGMflow, 0); 
+			SetGlobalFlag(GAltSEflow, 0); }
+		if (LoadValueFromLocalWork(SelectResult) == 1) {
+			SetGlobalFlag(GAltBGMflow, 1);
+			SetGlobalFlag(GAltSEflow, 1); }
+		if (LoadValueFromLocalWork(SelectResult) == 2) {
+			SetGlobalFlag(GAltBGMflow, 2);
+			SetGlobalFlag(GAltSEflow, 2); }
+//		if (LoadValueFromLocalWork(SelectResult) == 3) {
+//			SetGlobalFlag(GAltBGMflow, 3);
+//			SetGlobalFlag(GAltSEflow, 3); }
+//		if (LoadValueFromLocalWork(SelectResult) == 4) {
+//			SetGlobalFlag(GAltBGMflow, 4);
+//			SetGlobalFlag(GAltSEflow, 4); }
+//		if (LoadValueFromLocalWork(SelectResult) == 5) {
+//			SetGlobalFlag(GAltBGMflow, 5);
+//			SetGlobalFlag(GAltSEflow, 0); }
+
+		DisableWindow();
+		
+	}
+}
+
+void SoundEffectQuestion()
+{
+	if (GetGlobalFlag(GAltBGM) == 0) {
+		OutputLine(NULL, "どのサウンドトラックを使用しますか？",
+			   NULL, "What sound effects would you like to use?", Line_Normal);
+
+		char Item[4];
+
+		if (GetGlobalFlag(GLanguage) == 1) {
+			Item[0] = "Match Music Selection";	
+			Item[1] = "07th-Mod Audio Pack Sound Effects";			
+			Item[2] = "Original Sound Effects (2002)";
+			Item[3] = "New Patch Sound Effects (2019)";
+//			Item[4] = "Console Sound Effects";
+//			Item[5] = "MangaGamer Sound Effects (2009)";
+//			Item[6] = "Back";			
+		} else {
+			Item[0] = "音楽の選択を合わせる";	
+			Item[1] = "07th-Modオーディオパックのサウンドエフェクト";			
+			Item[2] = "オリジナルサウンドエフェクト";
+			Item[3] = "新しいパッチサウンドエフェクト (2019)";
+//			Item[4] = "コンソールサウンドエフェクト";
+//			Item[5] = "MangaGamer サウンドエフェクト (2009)";
+//			Item[6] = "バック";	
+		}
+
+		Select( 4, Item );
+
+		if (LoadValueFromLocalWork(SelectResult) == 0) { }
+		if (LoadValueFromLocalWork(SelectResult) == 1) {
+			SetGlobalFlag(GAltSEflow, 0); }
+		if (LoadValueFromLocalWork(SelectResult) == 2) {
+			SetGlobalFlag(GAltSEflow, 1); }
+		if (LoadValueFromLocalWork(SelectResult) == 3) {
+			SetGlobalFlag(GAltSEflow, 2); }
+//		if (LoadValueFromLocalWork(SelectResult) == 4) {
+//			SetGlobalFlag(GAltSEflow, 3); }
+//		if (LoadValueFromLocalWork(SelectResult) == 5) {
+//			SetGlobalFlag(GAltSEflow, 4); }
+//		if (LoadValueFromLocalWork(SelectResult) == 6) { }
+
+		DisableWindow();
+	}
+}
+
+void SoundAskAgain ()
+{
+	if (GetGlobalFlag(GAltBGM) == 0) {
+		OutputLine(NULL, "次回の起動時にもう一度質問しますか？",
+			   NULL, "Would you like to be asked again on next startup?", Line_Normal);
+
+		char Item[2];
+
+		if (GetGlobalFlag(GLanguage) == 1) {
+			Item[0] = "Yes";
+			Item[1] = "No";
+		} else {
+			Item[0] = "はい";
+			Item[1] = "いいえ";
+		}
+
+		Select( 2, Item );
+
+		if (LoadValueFromLocalWork(SelectResult) == 0) {
+			SetGlobalFlag(GAltBGM, 0); } 
+		if (LoadValueFromLocalWork(SelectResult) == 1) {
+			SetGlobalFlag(GAltBGM, 1); }
+
+		DisableWindow();
+	}
+}

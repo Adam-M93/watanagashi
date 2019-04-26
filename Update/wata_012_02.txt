@@ -9,7 +9,9 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	DrawSceneWithMask("background/ie1", "up", 0, 0, 300 );
 //gosub *Ch_mi_si
 
@@ -102,7 +104,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("white", "c", 0, 0, 300 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DrawScene("background/ie1", 400 );
 
 //　むわっとした熱気とセミの声が迎える＠
@@ -729,7 +733,9 @@ void main()
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawSceneWithMask("background/so_g1", "down", 0, 0, 300 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 
 //「なんだこりゃ＠...魅音、この新聞紙の上においてある漬物石は何だ＠　邪魔だぞ？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -818,7 +824,9 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys06", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys06", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys06", 128, 0 ); }
 	ModDrawCharacter(1, 3, "sprite/normal/me2_wink_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「人様の家なのに、ツバメが勝手に入ってきて巣を作ってるってわけ＠代々語り継いでるのか、季節になると決まってここに巣を作るんだよ＠迷惑してるんだけどねぇ。＠
@@ -1164,7 +1172,9 @@ void main()
 		   NULL, "\"Don't give me that 'hau'!!!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 4, "wa_005", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_005", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_005", 128, 64 ); }
 //　とりあえずクロスチョップをブチかましておく￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　とりあえずクロスチョップをブチかましておく。",
@@ -1222,7 +1232,9 @@ void main()
 
 
 
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	DisableWindow();
 	ModDrawCharacter(3, 2, "sprite/normal/re1a_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
@@ -1425,7 +1437,9 @@ void main()
 		   NULL, "...Rena opened her mouth to speak first, so I stopped her.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	ModDrawCharacter(3, 2, "sprite/normal/re1b_nande_b1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「......圭一くん......、＠
@@ -1855,7 +1869,9 @@ void main()
 
 	DisableWindow();
 	ModDrawCharacter(3, 3, "sprite/normal/me2_majime_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
-	PlayBGM( 1, "msys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys12", 128, 0 ); }
 
 //「................................................覚えはないけど＠そう思うに足る根拠があるなら聞かせてもらえる...？￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1990,7 +2006,9 @@ void main()
 		   NULL, " That's all I could feel from her.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 2, "lsys15", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys15", 128, 0 ); }
 	ModDrawCharacter(1, 2, "sprite/normal/re1a_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「......そして魅ぃちゃんは、!w1000......梨花ちゃんを.........、!w1000...............消、!w700..................隠してしまった。＠
@@ -2319,7 +2337,9 @@ void main()
 	OutputLine(NULL, "……あははははは。",
 		   NULL, " Ahahahahaha.", Line_WaitForInput);
 
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //...とんだ名探偵が身近にいたもんだよ＠...まさか、冷蔵庫の中身だけで......電話の内容まで見破るとは...＠.........あははははははは＠...参ったな＠......参った!w400参った、!w800あっははははははははははははは！！！＠
 	ModPlayVoiceLS(4, 3, "ps3/s02/03/130300334", 128, TRUE);
@@ -2834,7 +2854,9 @@ void main()
 
 
 //■昔語り
-	PlayBGM( 1, "msys18", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys18", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys18", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys18", 128, 0 ); }
 
 //「......雛見沢村が、かつて鬼ヶ淵村と呼ばれていたことをご存知ですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -4171,7 +4193,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawSceneWithMask("background/jsa7", "left", 0, 0, 300 );
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 
 //　魅音は腰を下ろさず、縁側への障子をするすると開けた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -5184,7 +5208,9 @@ void main()
 
 
 	DisableWindow();
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	ModDrawCharacter(1, 3, "sprite/normal/me2_def_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「３０分でいいから＠......圭ちゃんと二人きりにしてほしい。￥

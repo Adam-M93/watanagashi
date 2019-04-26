@@ -13,7 +13,9 @@ void dialog001()
 	OutputLine(NULL, "　もちろん、古手家の人間以外は",
 		   NULL, "Of course, if anyone but the Furude family enters...", Line_Continue);
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_024", 128, 64 ); }
 
 //「穢れ（ケガレ）」を持ち込むから立入禁止の不可侵領域＠......聖域なの。＠
 
@@ -158,7 +160,9 @@ void dialog009()
 	OutputLine(NULL, "…もう薄々は気付いてると思うけど、あれは田畑を耕す鍬ではなくて。",
 		   NULL, " ...You've probably realized it already, but that's not a hoe for plowing fields.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_023", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_023", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_023", 128, 64 ); }
 	ModPlayVoiceLS(4, 9, "ps2/09/130900126", 240, TRUE);
 	OutputLine(NULL, "…人間の腹をこじ開けるための解剖道具なのよ。」",
 		   NULL, " ...It's a tool for dissecting human bodies.\"", GetGlobalFlag(GLinemodeSp));

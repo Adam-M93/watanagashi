@@ -20,7 +20,9 @@ void main()
 	MoveBustshot( 2, NULL, 0, 280, -480, 2, 30000, FALSE );
 	MoveBustshot( 1, NULL, 0, 290, -480, 1, 30000, FALSE );
 	
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //　......突然、視界が開け、冷たい風が全身を撫でた＠
 	ClearMessage();
@@ -908,7 +910,9 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/jy1", 1000 );
-	PlayBGM( 2, "lsys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys13", 128, 0 ); }
 
 //　境内に戻ると、ガスコンロがいくつか出され大きな鍋に味噌汁が作られていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1240,7 +1244,9 @@ void main()
 	DisableWindow();
 	DrawSceneWithMask("background/jy1", "left", 0, 0, 200 );
 	FadeOutBGM( 1, 1000, TRUE );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 	FadeOutBGM( 2, 1000, TRUE );
 	ModDrawCharacterWithFiltering(1, 11, "sprite/night/oisi1_1_", "0", "left", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
@@ -1670,7 +1676,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/kuruma4", 1000 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //　...ん、!w800......＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1778,7 +1786,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_022", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_022", 128, 64 ); }
 
 //　.........何だか急に嫌な予感がした￥
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1812,7 +1822,9 @@ void main()
 		   NULL, "...I had a feeling that until Ooishi-san heard what he wanted to... he wouldn't be letting me go...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //「なっはっは...、そんなに構えられても困ります＠別に取って食おうってわけじゃないんですから＠...前原さん。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1993,7 +2005,9 @@ void main()
 		   NULL, "...I had a feeling that I didn't need to worry about that in his case.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //「......どうしてこんなことになっちゃったんでしょうねぇ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2107,7 +2121,9 @@ void main()
 	OutputLine(NULL, "…富竹さんと鷹野さんが「タタリ」に遭われた理由の方です。",
 		   NULL, " ...The reason Tomitake-san and Takano-san were cursed like that?", Line_WaitForInput);
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_024", 128, 64 ); }
 
 //.........何でもですね、入っちゃいけない、禁断の建物に入ったからだって言われてるんですよ。＠
 	ModPlayVoiceLS(4, 11, "ps3/s02/11/130700143", 128, TRUE);
@@ -2157,7 +2173,9 @@ void main()
 		   NULL, " ...As soon as we... revealed what we did...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //「祭具殿って言いましたっけ＠...あそこの鍵を簡易なものに付け替えたから賊に入られたんだって言うケチがついてるらしいんですよ。」/
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2168,7 +2186,9 @@ void main()
 	OutputLine(NULL, "…あそこの鍵を簡易なものに付け替えたから賊に入られたんだって言うケチがついてるらしいんですよ。」",
 		   NULL, " ...They're saying it was bad luck—the lock to it had been replaced by a simpler one, which made it easier for thieves to get inside.\"", Line_Continue);
 
-	PlaySE( 3, "wa_022", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_022", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_022", 128, 64 ); }
 
 	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 
@@ -2188,7 +2208,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/jsa1", 400 );
-	PlayBGM( 1, "msys15", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys15", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys15", 128, 0 ); }
 
 //「一昨年くらいまでは、祭具殿にはでっかいカンヌキとでっかい錠前がいくつも付けられてたらしいんですよ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2447,7 +2469,9 @@ void main()
 		   NULL, "Ooishi-san paused for emphasis, lighting another cigarette.", Line_Normal);
 	ClearMessage();
 	
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //「ここまで説明しても、まだ説明が足りませんかねぇ...。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2471,7 +2495,9 @@ void main()
 		   NULL, "Ooishi gave me a dry, meaningful grin and blew out another big puff of smoke.", Line_Normal);
 	ClearMessage();
 
-	PlaySE( 3, "wa_024", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_024", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_024", 128, 64 ); }
 
 //「......御三家の人間が相次いで消されてるんです＠どういうわけね＠...雛見沢の内側の、古い因習か何かに基づいてるんじゃないかと読んでるんですが、それ以上のことはさっぱり。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2547,7 +2573,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_027", 128, 64 ); }
 
 //　消える？！＠
 	ModPlayVoiceLS(4, 1, "ps3/s02/01/130100738_2", 128, TRUE);
@@ -2564,7 +2592,9 @@ void main()
 		   NULL, " ...That's insane!!", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 //「嫌でしょ。＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }

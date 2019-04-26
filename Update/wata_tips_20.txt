@@ -12,7 +12,9 @@ void main()
 	DisableWindow();
 	DrawScene("black", 1000 );
 	DrawScene("background/kuruma4", 1000 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 
 
 //「はい。郵便局員も目撃してないそうです＠...園崎本家は、郵便受けにハンコが吊るしてあるそうで、書留も宅急便も勝手にハンコを押して投函していい事になってるんだそうっす。＠

@@ -11,9 +11,13 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("black", 1000 );
-	PlayBGM( 1, "msys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 1, "msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 1, "Original\msys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 1, "April2019Update\msys13", 128, 0 ); }
 	DrawScene("background/mati7", 1000 );
-	PlayBGM( 2, "lsys20", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
 
 //「いえいえ、気にしないで下さいよ＠この店でおでんを食べるとですね＠なぜか、年契のガソリンスタンドの請求書に化けちゃうんですよ＠だから遠慮しないでもう一杯飲んでいけばいいのに。￥
 	ClearMessage();
@@ -103,7 +107,9 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/jysa1", 400 );
-	PlayBGM( 1, "msys07", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys07", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys07", 128, 0 ); }
 
 //　その死は、禁断の神殿「祭具殿」に踏み入ったためにオヤシロさまの怒りに触れた、というのがもっぱらの噂だ＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -150,8 +156,12 @@ void main()
 	ClearMessage();
 	DisableWindow();
 	DrawScene("background/mati7", 400 );
-	PlayBGM( 2, "lsys20", 128, 0 );
-	PlayBGM( 0, "lsys13", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 0, "lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 0, "Original\lsys13", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 0, "April2019Update\lsys13", 128, 0 ); }
 //dwaveplayloop 1
 
 //「熊ちゃんは見たことありませんか＠　私はずいぶん前に何かの用で行った時に見たことをよく覚えてますよ。＠

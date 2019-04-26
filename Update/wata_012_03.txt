@@ -8,7 +8,9 @@ void main()
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
-	PlayBGM( 2, "lsys12", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys12", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys12", 128, 0 ); }
 	ModDrawCharacter(2, 3, "sprite/normal/me2_hau_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene("background/so_g1", 1000 );
 
@@ -1002,7 +1004,9 @@ void main()
 
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	PlaySE( 3, "wa_026", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_026", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_026", 128, 64 ); }
 	Wait( 600 );
 
 //............紛れもなく、!w800......現代の祭具殿だった.........￥
@@ -1017,7 +1021,9 @@ void main()
 		   NULL, " a modern storehouse for ritual implements......", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	PlayBGM( 1, "msys21", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys21", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys21", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys21", 128, 0 ); }
 	ModDrawCharacter(2, 3, "sprite/night/me2_def_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask("background/saiguden_02", "up", 0, 0, 1300 );
 
@@ -1627,7 +1633,9 @@ void main()
 		   NULL, "Shion broke out into a fierce shiver... brought on by that laugh... and rattled the iron bars as she wailed...", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 2, "lsys25", 128, 0 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlayBGM( 2, "lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlayBGM( 2, "Original\lsys25", 128, 0 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlayBGM( 2, "April2019Update\lsys25", 128, 0 ); }
 
 //「もうやめてぇえぇえぇえッ！！＠　圭ちゃんを殺さないでぇええぇえ！＠　圭ちゃんは何の関係もないでしょ？＠　殺すなら早く私を...、私を殺してよ！！＠　もう誰が死ぬのも...嫌ぁああぁあぁぁああああぁッ！！！！￥
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1715,11 +1723,15 @@ void main()
 	DisableWindow();
 	DrawScene("black", 50 );
 	DrawScene("scene/029", 400 );
-	PlaySE( 4, "wa_027", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 4, "wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 4, "Original\wa_027", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 4, "April2019Update\wa_027", 128, 64 ); }
 	ShakeScreen( 1, 20, 20, 5, 0, );
 
 	FadeOutBGM( 2, 1000, TRUE );
-	PlayBGM( 1, "msys20", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys20", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys20", 128, 0 ); }
 
 //　魅音が三日月をさらに切り込んだような...信じられないくらい残酷に口元を歪ませて...笑っていた＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1787,7 +1799,9 @@ void main()
 	OutputLine(NULL, "　…誘われるままに膝を折り、床に叩き付ける。",
 		   NULL, "...My knees buckled under the temptation and hit the floor.", Line_WaitForInput);
 
-	PlaySE( 3, "wa_003", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_003", 128, 64 ); }
 
 //...それから、全身をばったりと倒す＠
 	OutputLine(NULL, "…それから、全身をばったりと倒す。",
@@ -1895,7 +1909,9 @@ void main()
 	OutputLine(NULL, "　詩音の感情がはじけて…号泣した。",
 		   NULL, "Shion's emotions exploded outward... and she burst into bitter weeping.", GetGlobalFlag(GLinemodeSp));
 
-	PlaySE( 3, "wa_003", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_003", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_003", 128, 64 ); }
 
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
@@ -2868,7 +2884,9 @@ void main()
 
 
 
-	PlayBGM( 1, "msys17", 128, 0 );
+	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //　涙がこみ上げてぼろぼろと溢れ出す...＠
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -4024,7 +4042,9 @@ void main()
 
 	DisableWindow();
 	DrawScene("white", 10 );
-	PlaySE( 3, "wa_036", 128, 64 );
+	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_036", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_036", 128, 64 ); }
+	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_036", 128, 64 ); }
 	DrawScene("black", 10000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );

@@ -3,8 +3,8 @@ void main()
 	// Max Number for Global Flags hotkey
 	SetGlobalFlag(GCensorMaxNum , 5);
 	SetGlobalFlag(GEffectExtendMaxNum , 0);
-	SetGlobalFlag(GAltBGMflowMaxNum , 0);
-	SetGlobalFlag(GAltSEflowMaxNum , 0);
+	SetGlobalFlag(GAltBGMflowMaxNum , 2);
+	SetGlobalFlag(GAltSEflowMaxNum , 2);
 
 	// restore default ADV-MODE setting
 	if(GetGlobalFlag(GMOD_SETTING_LOADER) == 0) {
