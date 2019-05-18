@@ -19,6 +19,18 @@ void BrandLogo()
 	SetGlobalFlag(GFlag_FirstPlay, 1);
 
 	ModCallScriptSection("&opening", "OpeningQuestion");
+	
+	ModCallScriptSection("&sound", "SoundUseLast");
+	
+	ModCallScriptSection("&sound", "AudioQuestion");
+	
+	ModCallScriptSection("&sound", "MusicQuestion");
+	
+	ModCallScriptSection("&sound", "ItaloQuestion");
+	
+	ModCallScriptSection("&sound", "SoundEffectQuestion");
+	
+	ModCallScriptSection("&sound", "SoundAskAgain");
 
 	DrawBG( "07thlogo", 1000, TRUE );
 	Wait( 2000 );
@@ -26,6 +38,10 @@ void BrandLogo()
 	Wait( 2000 );
 	DrawSceneWithMask( "07th-mod", "logomask", 0, 0, 1000 );
 	Wait( 2000 );
+	DrawSceneWithMask( "black", "logomask", 0, 0, 1000 );
+
+	Wait( 2000 );
+
 	DrawSceneWithMask( "black", "logomask", 0, 0, 1000 );
 
 	ModCallScriptSection("&opening", "OpeningLaunch");

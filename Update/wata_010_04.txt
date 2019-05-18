@@ -20,9 +20,10 @@ void main()
 	MoveBustshot( 2, NULL, 0, 280, -480, 2, 30000, FALSE );
 	MoveBustshot( 1, NULL, 0, 290, -480, 1, 30000, FALSE );
 	
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //　......突然、視界が開け、冷たい風が全身を撫でた＠
 	ClearMessage();

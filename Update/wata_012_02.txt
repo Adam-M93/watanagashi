@@ -9,9 +9,10 @@ void main()
 	FadeOutBGM( 2, 1000, TRUE );
 	DisableWindow();
 	DrawScene("black", 1000 );
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	DrawSceneWithMask("background/ie1", "up", 0, 0, 300 );
 //gosub *Ch_mi_si
 
@@ -1437,9 +1438,10 @@ void main()
 		   NULL, "...Rena opened her mouth to speak first, so I stopped her.", Line_Normal);
 	ClearMessage();
 	DisableWindow();
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	ModDrawCharacter(3, 2, "sprite/normal/re1b_nande_b1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 200, TRUE );
 
 //「......圭一くん......、＠
@@ -2337,9 +2339,10 @@ void main()
 	OutputLine(NULL, "……あははははは。",
 		   NULL, " Ahahahahaha.", Line_WaitForInput);
 
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 
 //...とんだ名探偵が身近にいたもんだよ＠...まさか、冷蔵庫の中身だけで......電話の内容まで見破るとは...＠.........あははははははは＠...参ったな＠......参った!w400参った、!w800あっははははははははははははは！！！＠
 	ModPlayVoiceLS(4, 3, "ps3/s02/03/130300334", 128, TRUE);
@@ -2854,9 +2857,10 @@ void main()
 
 
 //■昔語り
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys18", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys18", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys18", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys18", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys18", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys18", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys18", 128, 0 ); }
 
 //「......雛見沢村が、かつて鬼ヶ淵村と呼ばれていたことをご存知ですか？＠
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -5208,9 +5212,10 @@ void main()
 
 
 	DisableWindow();
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	ModDrawCharacter(1, 3, "sprite/normal/me2_def_a1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 //「３０分でいいから＠......圭ちゃんと二人きりにしてほしい。￥

@@ -732,9 +732,10 @@ void main()
 	DrawScene("black", 400 );
 	FadeOutBGM( 1, 1000, TRUE );
 	FadeOutBGM( 2, 1000, TRUE );
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys17", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys17", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys17", 128, 0 ); }
 	DrawSceneWithMask("background/simen3", "left", 0, 0, 300 );
 
 //　園崎家が必死に隠していた事件も、わずかなほころびから雑誌社にすっぱ抜かれることになった￥
@@ -1845,9 +1846,10 @@ void main()
 	if (GetGlobalFlag(GAltSEflow) == 0) { 	PlaySE( 3, "wa_030", 128, 64 ); }
 	if (GetGlobalFlag(GAltSEflow) == 1) { 	PlaySE( 3, "Original\wa_030", 128, 64 ); }
 	if (GetGlobalFlag(GAltSEflow) == 2) { 	PlaySE( 3, "April2019Update\wa_030", 128, 64 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys19", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys19", 128, 0 ); }
-	if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys19", 128, 0 ); }
+	if (GetGlobalFlag(GItaloVer) == 1) { PlayBGM(1, "ItaloRemakes\msys19", 128, 0); }
+		else if (GetGlobalFlag(GAltBGMflow) == 0) { 	PlayBGM( 1, "msys19", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 1) { 	PlayBGM( 1, "Original\msys19", 128, 0 ); }
+		else if (GetGlobalFlag(GAltBGMflow) == 2) { 	PlayBGM( 1, "April2019Update\msys19", 128, 0 ); }
 
 //.....................おぶ......￥
 	OutputLine(NULL, "…………………おぶ……、",

@@ -24,6 +24,7 @@ void main()
 		SetGlobalFlag(GWindowOpacity , 100);
 		SetGlobalFlag(GHideButtons , 0);
 		SetGlobalFlag(GArtStyle , 0);
+		SetGlobalFlag(GItaloVer , 0);
 		SetGlobalFlag(GMOD_SETTING_LOADER , 3);
 	}
 
@@ -45,6 +46,7 @@ void main()
 		SetGlobalFlag(GWindowOpacity , 50);
 		SetGlobalFlag(GHideButtons , 0);
 		SetGlobalFlag(GArtStyle , 0);
+		SetGlobalFlag(GItaloVer , 0);
 		SetGlobalFlag(GMOD_SETTING_LOADER , 3);
 	}
 
@@ -71,6 +73,7 @@ void main()
 		SetGlobalFlag(GAltBGMflowMaxNum , 0);
 		SetGlobalFlag(GAltSEflowMaxNum , 0);
 		SetGlobalFlag(GArtStyle , 1);
+		SetGlobalFlag(GItaloVer , 0);
 	}
 
 	ModADVModeSettingLoad(
